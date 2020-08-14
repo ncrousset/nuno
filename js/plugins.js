@@ -1,5 +1,15 @@
 /*========== NAVBAR TRANSPARENT TO SOLID ==========*/
-
+$(document).ready(function () {
+    $(window).scroll(checkScroll);
+    function checkScroll() {
+        let navbar = $('.navbar')
+        if($(window).scrollTop() >= 300) {
+            navbar.addClass('solid');
+        }else {
+            navbar.removeClass('solid');
+        }
+    }
+})
 
 /*========== ADD SOLID CLASS TO NAVBAR WHEN TOGGLED ==========*/
 
